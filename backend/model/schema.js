@@ -21,6 +21,6 @@ const myschema = new Schema({
     },*/
 });
 
-const taskmodel = model('wordsearch' , myschema);
+const taskmodel = model('wordsearch_1.0' , myschema);
 
 module.exports = taskmodel;
