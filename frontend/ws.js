@@ -15,7 +15,7 @@ async function send(e){
         e.preventDefault();
             const tempword = word.value;
             const tempmess = mess.value;
-            const response = await fetch("http://localhost:3000/send" , {
+            const response = await fetch("https://wordsearch-1-0-backend.onrender.com/send" , {
             method : "POST",
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify({ word : tempword , message : tempmess}),
@@ -36,7 +36,7 @@ async function findtheelement(e){
     try {
       e.preventDefault();
       const tempword = word.value; // Get input value
-      const response = await fetch(`http://localhost:3000/get/${tempword}`, {
+      const response = await fetch(`https://wordsearch-1-0-backend.onrender.com/get/${tempword}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -55,7 +55,7 @@ async function find(e){
     try {
       e.preventDefault();
       const tempword = word.value; // Get input value
-      const response = await fetch(`http://localhost:3000/get/${tempword}`, {
+      const response = await fetch(`https://wordsearch-1-0-backend.onrender.com/get/${tempword}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
